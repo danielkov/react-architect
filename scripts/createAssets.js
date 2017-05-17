@@ -98,7 +98,7 @@ const createAssets = (componentName, componentPath) => {
     .catch((e) => console.log(chalk.red('Failed to parse, write or rename component assets, with error:'), e))
   }
 
-  const createGitIgnore () => {
+  const createGitIgnore = () => {
     console.log('Creating .gitignore file.')
 
     return writeFile('node_modules\n', addDest('.gitignore'))
