@@ -1,3 +1,6 @@
+## 0.9.5 - Updated **README**.
+Added a little more clarification about folder structure and made it look a little better.
+
 ## 0.9.4 - Added **README** and **CHANGELOG**.
 
 ## 0.9.3 - fixed function added in previous release
