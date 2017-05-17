@@ -1,0 +1,42 @@
+{
+  "name": "{{my-component}}",
+  "version": "1.0.0",
+  "description": "{{MyComponent}} React Component.",
+  "main": "lib/{{MyComponent}}.js",
+  "scripts": {
+    "start": "start-storybook -p 9001 -c .storybook",
+    "test": "jest --config",
+    "build": "babel src -d lib --source-maps"
+  },
+  "keywords": [
+    "react",
+    "component"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@kadira/storybook": "^2.35.3",
+    "babel-jest": "^20.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^2.8.2",
+    "jest": "^20.0.0",
+    "jest-enzyme": "^3.1.0",
+    "react-test-renderer": "^15.5.4"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
+    "unmockedModulePathPatterns": [
+      "react",
+      "enzyme",
+      "jest-enzyme"
+    ]
+  }
+}
