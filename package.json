@@ -1,6 +1,6 @@
 {
   "name": "react-architect",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "Create a simple boilerplate for a React Component.",
   "main": "index.js",
   "bin": {
