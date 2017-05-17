@@ -21,7 +21,6 @@ const createAssets = (componentName, componentPath) => {
 
   const staticFiles = [
     '.babelrc',
-    '.gitignore',
     '.npmignore',
     '.storybook/config.js'
   ]
@@ -99,10 +98,19 @@ const createAssets = (componentName, componentPath) => {
     .catch((e) => console.log(chalk.red('Failed to parse, write or rename component assets, with error:'), e))
   }
 
+  const createGitIgnore () => {
+    console.log('Creating .gitignore file.')
+
+    return writeFile('node_modules\n', addDest('.gitignore'))
+    .then(() => console.log(chalk.green('Successfully added .gitignore.')))
+    .catch((e) => console.log(chalk.red('Failed to add .gitignore file, with error:'), e))
+  }
+
   return Promise.all([
     createStatic(),
     createDynamic(),
-    createComponent()
+    createComponent(),
+    createGitIgnore()
   ])
 }
 
